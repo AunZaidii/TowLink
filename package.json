@@ -7,6 +7,9 @@
     "install:mobile": "cd \"Mobile screen UI\" && npm install",
     "install:laptop": "cd \"Laptop screen UI\" && npm install",
     "install": "npm run install:mobile && npm run install:laptop",
+    "build:mobile": "cd \"Mobile screen UI\" && npm run build",
+    "build:laptop": "cd \"Laptop screen UI\" && npm run build",
+    "build": "npm run build:mobile",
     "dev": "cd \"Mobile screen UI\" && npm run dev"
   }
 }

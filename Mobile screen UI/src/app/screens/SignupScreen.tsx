@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { useNavigate } from "react-router";
 import { ArrowLeft, User, Mail, Lock, Phone, Eye, EyeOff } from "lucide-react";
-import { MobileContainer } from "../components/MobileContainer";
 
 export function SignupScreen() {
   const navigate = useNavigate();
@@ -38,8 +37,8 @@ export function SignupScreen() {
   };
 
   return (
-    <MobileContainer>
-      <div className="h-full flex flex-col bg-white">
+    <div className="min-h-screen bg-white flex items-center justify-center p-4">
+      <div className="w-full max-w-md">
         {/* Header with Back Button */}
         <div className="flex items-center px-4 pt-6 pb-4">
           <button
@@ -49,7 +48,7 @@ export function SignupScreen() {
           >
             <ArrowLeft className="w-6 h-6 text-foreground" />
           </button>
-          <h1 className="text-xl text-foreground ml-4">Create Account</h1>
+          <h1 className="text-xl md:text-2xl text-foreground ml-4">Create Account</h1>
         </div>
 
         {/* Progress Indicator */}
@@ -76,10 +75,10 @@ export function SignupScreen() {
         </div>
 
         {/* Form */}
-        <form onSubmit={handleNext} className="flex-1 px-6 overflow-y-auto">
+        <form onSubmit={handleNext} className="px-6">
           {currentStep === 1 && (
             <div className="space-y-4">
-              <h2 className="text-2xl text-foreground mb-6">Personal Information</h2>
+              <h2 className="text-2xl md:text-3xl text-foreground mb-6">Personal Information</h2>
               
               {/* Full Name */}
               <div>
@@ -145,7 +144,7 @@ export function SignupScreen() {
 
           {currentStep === 2 && (
             <div className="space-y-4">
-              <h2 className="text-2xl text-foreground mb-6">Secure Your Account</h2>
+              <h2 className="text-2xl md:text-3xl text-foreground mb-6">Secure Your Account</h2>
               
               {/* Password */}
               <div>
@@ -225,12 +224,12 @@ export function SignupScreen() {
           <button
             type="submit"
             onClick={handleNext}
-            className="w-full bg-[#FF6B00] text-white py-4 rounded-xl hover:bg-[#FF7A1A] transition-colors shadow-lg"
+            className="w-full bg-[#FF6B00] text-white py-4 rounded-xl hover:bg-[#FF7A1A] transition-colors shadow-lg text-base md:text-lg"
           >
             {currentStep === totalSteps ? "Create Account" : "Continue"}
           </button>
         </div>
       </div>
-    </MobileContainer>
+    </div>
   );
 }

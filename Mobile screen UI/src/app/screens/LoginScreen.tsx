@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { useNavigate } from "react-router";
 import { Truck, Eye, EyeOff, Mail, Lock } from "lucide-react";
-import { MobileContainer } from "../components/MobileContainer";
 
 export function LoginScreen() {
   const navigate = useNavigate();
@@ -16,19 +15,19 @@ export function LoginScreen() {
   };
 
   return (
-    <MobileContainer>
-      <div className="h-full flex flex-col bg-white">
+    <div className="min-h-screen bg-white flex items-center justify-center p-4">
+      <div className="w-full max-w-md">
         {/* Header */}
-        <div className="flex flex-col items-center pt-12 pb-8 px-6">
-          <div className="bg-[#FFF4ED] rounded-full p-6 mb-4">
-            <Truck className="w-12 h-12 text-[#FF6B00]" aria-hidden="true" />
+        <div className="flex flex-col items-center pt-8 md:pt-12 pb-8 px-6">
+          <div className="bg-[#FFF4ED] rounded-full p-6 md:p-8 mb-4">
+            <Truck className="w-12 h-12 md:w-16 md:h-16 text-[#FF6B00]" aria-hidden="true" />
           </div>
-          <h1 className="text-3xl text-foreground mb-2">Welcome Back</h1>
-          <p className="text-muted-foreground">Sign in to continue</p>
+          <h1 className="text-3xl md:text-4xl text-foreground mb-2">Welcome Back</h1>
+          <p className="text-muted-foreground text-base md:text-lg">Sign in to continue</p>
         </div>
 
         {/* Form */}
-        <form onSubmit={handleLogin} className="flex-1 px-6">
+        <form onSubmit={handleLogin} className="px-6">
           <div className="space-y-4">
             {/* Email Input */}
             <div>
@@ -96,13 +95,13 @@ export function LoginScreen() {
           {/* Login Button */}
           <button
             type="submit"
-            className="w-full bg-[#FF6B00] text-white py-4 rounded-xl hover:bg-[#FF7A1A] transition-colors shadow-lg mt-8"
+            className="w-full bg-[#FF6B00] text-white py-4 rounded-xl hover:bg-[#FF7A1A] transition-colors shadow-lg mt-8 text-base md:text-lg"
           >
             Sign In
           </button>
 
           {/* Sign Up Link */}
-          <div className="text-center mt-6">
+          <div className="text-center mt-6 mb-8">
             <span className="text-muted-foreground">Don't have an account? </span>
             <button
               type="button"
@@ -113,9 +112,7 @@ export function LoginScreen() {
             </button>
           </div>
         </form>
-
-        <div className="h-8"></div>
       </div>
-    </MobileContainer>
+    </div>
   );
 }

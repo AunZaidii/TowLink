@@ -4,13 +4,18 @@ import { SplashScreen } from "./screens/SplashScreen";
 import { OnboardingScreen } from "./screens/OnboardingScreen";
 import { LoginScreen } from "./screens/LoginScreen";
 import { SignupScreen } from "./screens/SignupScreen";
-import { HomeScreen } from "./screens/HomeScreen";
+import { ResponsiveHome } from "./screens/ResponsiveHome";
 import { TowRequestScreen } from "./screens/TowRequestScreen";
 import { TrackingScreen } from "./screens/TrackingScreen";
 import { PlansScreen } from "./screens/PlansScreen";
 import { PaymentScreen } from "./screens/PaymentScreen";
 import { SuccessScreen } from "./screens/SuccessScreen";
 import { ProfileScreen } from "./screens/ProfileScreen";
+import { ResponsivePlans } from "./screens/ResponsivePlans";
+import { ResponsiveTracking } from "./screens/ResponsiveTracking";
+import { ResponsiveProfile } from "./screens/ResponsiveProfile";
+import { ResponsivePayment } from "./screens/ResponsivePayment";
+import { ResponsiveSuccess } from "./screens/ResponsiveSuccess";
 import { PersonalInfoScreen } from "./screens/PersonalInfoScreen";
 import { PaymentMethodsScreen } from "./screens/PaymentMethodsScreen";
 import { PrivacySecurityScreen } from "./screens/PrivacySecurityScreen";
@@ -40,7 +45,7 @@ export const router = createBrowserRouter([
       },
       {
         path: "home",
-        Component: HomeScreen,
+        Component: ResponsiveHome,
       },
       {
         path: "request",
@@ -48,7 +53,7 @@ export const router = createBrowserRouter([
       },
       {
         path: "tracking",
-        Component: TrackingScreen,
+        Component: ResponsiveTracking,
       },
       {
         path: "chat",
@@ -56,19 +61,19 @@ export const router = createBrowserRouter([
       },
       {
         path: "plans",
-        Component: PlansScreen,
+        Component: ResponsivePlans,
       },
       {
         path: "payment",
-        Component: PaymentScreen,
+        Component: ResponsivePayment,
       },
       {
         path: "success",
-        Component: SuccessScreen,
+        Component: ResponsiveSuccess,
       },
       {
         path: "profile",
-        Component: ProfileScreen,
+        Component: ResponsiveProfile,
       },
       {
         path: "profile/personal-info",

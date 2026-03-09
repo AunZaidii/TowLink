@@ -1,0 +1,13 @@
+{
+  "name": "towlink-root",
+  "private": true,
+  "version": "0.0.1",
+  "description": "Root frontend entry for TowLink, running the merged responsive UI.",
+  "scripts": {
+    "install:mobile": "cd \"Mobile screen UI\" && npm install",
+    "install:laptop": "cd \"Laptop screen UI\" && npm install",
+    "install": "npm run install:mobile && npm run install:laptop",
+    "dev": "cd \"Mobile screen UI\" && npm run dev"
+  }
+}
+

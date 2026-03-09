@@ -1,0 +1,3 @@
+# Exclude local dependencies and build outputs from Vercel build context
+**/node_modules
+**/dist
